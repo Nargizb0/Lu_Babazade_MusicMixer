@@ -77,11 +77,11 @@ header {
 	margin-top: 30px;
 }
 
-#drop-board {
+.container {
 	width: 90%;
 }
 
-.drop-square {
+.dropZone {
 	background-color: #000000;
 	border-radius: 10px;
 	width: 4.5rem;
