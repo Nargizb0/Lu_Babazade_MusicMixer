@@ -1,8 +1,15 @@
 // JavaScript
 
 //Element Variables
-const musicFruits = document.querySelector('.musicFruit'),
-    dropZone = document.querySelector('.dropZone');
+const lemonAudio = document.querySelector('#lemonAudio'),
+    orangeAudio = document.querySelector('#orangeAudio'),
+    watermelonAudio = document.querySelector('#watermelonAudio'),
+    pearAudio = document.querySelector('#pearAudio'),
+    dropZone1 = document.querySelector('#dropZone1'),
+    dropZone2 = document.querySelector('#dropZone2'),
+    dropZone3 = document.querySelector('#dropZone3'),
+    dropZone4 = document.querySelector('#dropZone4');
+
 let draggedPiece;
 
 //Functional variables
@@ -38,7 +45,7 @@ function dropped(e) {
 function playAudio(selectedInstrument, selectedDropZone) {
     console.log(selectedInstrument);
     let instrument = document.createElement('audio');
-        instrument.src = `audio/${selectedInstrument}.wav`;
+        instrument.src = `audio/${selectedInstrument}.mp3`;
         instrument.load();
         selectedDropZone.appendChild(instrument);
         instrument.loop = true;
@@ -47,6 +54,16 @@ function playAudio(selectedInstrument, selectedDropZone) {
 
 
 //event listeners
-musicFruits.addEventListener('dragstart', startedDragging);
-dropZone.addEventListener('dragover', draggedOver);
-dropZone.addEventListener('drop', dropped);
+lemonAudio.addEventListener('dragstart', startedDragging);
+orangeAudio.addEventListener('dragstart', startedDragging);
+watermelonAudio.addEventListener('dragstart', startedDragging);
+pearAudio.addEventListener('dragstart', startedDragging);
+
+dropZone1.addEventListener('dragover', draggedOver);
+dropZone1.addEventListener('drop', dropped);
+dropZone2.addEventListener('dragover', draggedOver);
+dropZone2.addEventListener('drop', dropped);
+dropZone3.addEventListener('dragover', draggedOver);
+dropZone3.addEventListener('drop', dropped);
+dropZone4.addEventListener('dragover', draggedOver);
+dropZone4.addEventListener('drop', dropped);
