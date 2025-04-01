@@ -2,30 +2,85 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Orbitz Music Mixer</title>
+	<title>OrbitzMusic Mixer</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 	<link href="css/grid.css" rel="stylesheet" type="text/css">
+	<link href="images/favicon_1.svg" rel="icon" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <h2>Welcome to the music mixer for the drink from another dimension!</h2>
-        <nav class="grid-con">
+	<header class="grid-con">
+		<h1 class="hidden">Orbitz Header</h1>
+		<div class="col-span-full m-col-span-full">
+			<img src="images/Logo_Icon.svg" alt="Orbitz Logo" id="mainLogo">
+			<p id="instructions">Drag The Fruits Into The Boxes To Play</p>
+		</div>
+	</header>
 
-        </nav>
-    </header>
-    <section id="music-symbols" class="grid-con">
+	<section id="drop-board" class="grid-con">
+		<h2 class="hidden">Drop Zones</h2>
+		<div class="drop-square col-start-1 col-span-1 m-col-start-3 m-col-end-4 l-col-start-5 l-col-span-1"></div>
+		<div class="drop-square col-start-2 col-span-1 m-col-start-5 m-col-end-6 l-col-start-6 l-col-span-1"></div>
+		<div class="drop-square col-start-3 col-span-1 m-col-start-7 m-col-end-8 l-col-start-7 l-col-span-1"></div>
+		<div class="drop-square col-start-4 col-span-1 m-col-start-9 m-col-end-10 l-col-start-8 l-col-span-1"></div>
+	</section>
 
-    </section>
-    <section id="button-navigation" class="grid-con">
 
-    </section>
+
+	<section class="fruit-box grid-con">
+		<h2 class="hidden">Fruits Box One</h2>
+		<div class="fruits col-start-1 col-span-1 m-col-start-3 m-col-end-4 l-col-start-1 l-col-span-1">
+			<img src="images/lemon_icon.svg" alt="strawberry" id="bass_guitar_1" draggable="true">
+			<p>Bass</p>
+		</div>
+		<div class="fruits col-start-2 col-span-1 m-col-start-5 m-col-end-6 l-col-start-2 l-col-span-1">
+			<img src="images/orange_icon.svg" alt="apple" id="guitar_riff_1" draggable="true">
+			<p>Guitar</p>
+		</div>
+		<div class="fruits col-start-3 col-span-1 m-col-start-7 m-col-end-8 l-col-start-12 l-col-span-1">
+			<img src="images/wmelon_icon.svg" alt="wmelon" id="drum_kit_1" draggable="true">
+			<p>Drums</p>
+		</div>
+		<div class="fruits col-start-4 col-span-1 m-col-start-9 m-col-end-10 l-col-start-13 l-col-span-1">
+			<img src="images/pear_icon.svg" alt="pear" id="techno_beat_1" draggable="true">
+			<p>Synth</p>
+		</div>
+	</section>
+
+	
+	
+
+	<section class="audio-box">
+		<h2 class="hidden">Buttons</h2>
+		<button id="playBtn" class="btn">
+			<img src="images/Button_Play.svg" alt="Play Button" id="play-btn">
+		</button>
+		<button id="pauseBtn" class="btn">
+			<img src="images/Button_Pause.svg" alt="Pause Button" id="pause-btn">
+		</button>
+		<button id="resetBtn" class="btn">
+			<img src="images/Button_Reset.svg" alt="Reset Button" id="reset-btn">
+		</button>
+	</section>
+
+	<section class="grid-con">
+		<h2 class="hidden">Volume</h2>
+		<div class="volume col-span-full m-col-span-full l-col-span-full">
+			<input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+		</div>
+	</section>
+
+	<section class="grid-con">
+		<h2 class="hidden">orbitz illustration</h2>
+		<img src="images/ai_icon.svg" alt="ai_icon" id="ai" class="col-span-full m-col-span-full l-col-span-full">
+	</section>
+
+	
+	<script src="js/main.js"></script>
 </body>
 
-<footer>
-</footer>
     <script src="js/main.js"></script>
 </html>
