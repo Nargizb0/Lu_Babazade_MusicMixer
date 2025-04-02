@@ -36,10 +36,16 @@ function draggedOver(e) {
 function dropped(e) {
     console.log('drop called');
     e.preventDefault(e);
-    this.appendChild(draggedPiece);
 
-//special audio effect method 'play'
-    playAudio(draggedPiece.id, this);
+    // Check if the drop zone already contains a child element
+    if (this.childElementCount === 0) { // If the drop zone is empty
+        this.appendChild(draggedPiece); // Append the dragged element to the drop zone
+        // Special audio effect method 'play'
+        playAudio(draggedPiece.id, this);
+    } else {
+        console.log('This drop zone already contains an element!');
+        // Optionally, you can alert or provide feedback to the user that the drop zone is full
+    }
 }
 
 function playAudio(selectedInstrument, selectedDropZone) {
