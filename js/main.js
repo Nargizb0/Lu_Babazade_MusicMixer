@@ -5,6 +5,10 @@ const lemonAudio = document.querySelector('#lemonAudio'),
     orangeAudio = document.querySelector('#orangeAudio'),
     watermelonAudio = document.querySelector('#watermelonAudio'),
     pearAudio = document.querySelector('#pearAudio'),
+    icon1 = document.querySelector('#icon1'),
+    icon2 = document.querySelector('#icon2'),
+    icon3 = document.querySelector('#icon3'),
+    icon4 = document.querySelector('#icon4'),
     dropZone1 = document.querySelector('#dropZone1'),
     dropZone2 = document.querySelector('#dropZone2'),
     dropZone3 = document.querySelector('#dropZone3'),
@@ -94,6 +98,10 @@ lemonAudio.addEventListener('dragstart', startedDragging);
 orangeAudio.addEventListener('dragstart', startedDragging);
 watermelonAudio.addEventListener('dragstart', startedDragging);
 pearAudio.addEventListener('dragstart', startedDragging);
+icon1.addEventListener('dragstart', startedDragging);
+icon2.addEventListener('dragstart', startedDragging);
+icon3.addEventListener('dragstart', startedDragging);
+icon4.addEventListener('dragstart', startedDragging);
 //dropzones
 dropZone1.addEventListener('dragover', draggedOver);
 dropZone1.addEventListener('drop', dropped);
