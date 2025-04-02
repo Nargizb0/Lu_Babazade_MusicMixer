@@ -31,39 +31,48 @@
 	<section class="fruit-box grid-con">
 		<h2 class="hidden">Fruits Box One</h2>
 		<div class="fruits col-start-1 col-span-1 m-col-start-3 m-col-end-4 l-col-start-1 l-col-span-1">
-			<img src="images/lemon_icon.svg" alt="Lemon" class="musicFruit" id="lemonAudio" draggable="true">
+			<img src="images/lemon_icon.svg" alt="Lemon" class="musicFruit" id="lemonAudio" draggable="true" data-audio="audioLemon">
 			<p>Fruity Lemon</p>
 		</div>
 		<div class="fruits col-start-2 col-span-1 m-col-start-5 m-col-end-6 l-col-start-2 l-col-span-1">
-			<img src="images/orange_icon.svg" alt="Orange" class="musicFruit" id="orangeAudio" draggable="true">
+			<img src="images/orange_icon.svg" alt="Orange" class="musicFruit" id="orangeAudio" draggable="true" data-audio="audioOrange">
 			<p>Fruity Orange</p>
 		</div>
 		<div class="fruits col-start-3 col-span-1 m-col-start-7 m-col-end-8 l-col-start-12 l-col-span-1">
-			<img src="images/wmelon_icon.svg" alt="Watermelon" class="musicFruit" id="watermelonAudio" draggable="true">
+			<img src="images/wmelon_icon.svg" alt="Watermelon" class="musicFruit" id="watermelonAudio" draggable="true" data-audio="audioWatermelon">
 			<p>Fruity Watermelon</p>
 		</div>
 		<div class="fruits col-start-4 col-span-1 m-col-start-9 m-col-end-10 l-col-start-13 l-col-span-1">
-			<img src="images/pear_icon.svg" alt="pear" class="musicFruit" id="pearAudio" draggable="true">
+			<img src="images/pear_icon.svg" alt="pear" class="musicFruit" id="pearAudio" draggable="true" data-audio="audioPear">
 			<p>Fruity Pear</p>
 		</div>
 		<div class="fruits col-start-5 col-span-1 m-col-start-3 m-col-end-4 l-col-start-1 l-col-span-1">
-			<img src="images/icon-01.svg" alt="Icon1" class="musicFruit" id="icon1" draggable="true">
+			<img src="images/icon-01.svg" alt="Icon1" class="musicFruit" id="icon1" draggable="true" data-audio="audioIcon1">
 			<p>Pink Guy</p>
 		</div>
 		<div class="fruits col-start-6 col-span-1 m-col-start-5 m-col-end-6 l-col-start-2 l-col-span-1">
-			<img src="images/icon-02.svg" alt="Icon2" class="musicFruit" id="icon2" draggable="true">
+			<img src="images/icon-02.svg" alt="Icon2" class="musicFruit" id="icon2" draggable="true" data-audio="audioIcon2">
 			<p>Yellow Guy</p>
 		</div>
 		<div class="fruits col-start-7 col-span-1 m-col-start-7 m-col-end-8 l-col-start-12 l-col-span-1">
-			<img src="images/icon-03.svg" alt="Icon3" class="musicFruit" id="icon3" draggable="true">
+			<img src="images/icon-03.svg" alt="Icon3" class="musicFruit" id="icon3" draggable="true" data-audio="audioIcon3">
 			<p>Orange Guy</p>
 		</div>
 		<div class="fruits col-start-8 col-span-1 m-col-start-9 m-col-end-10 l-col-start-13 l-col-span-1">
-			<img src="images/icon-04.svg" alt="Icon4" class="musicFruit" id="icon4" draggable="true">
+			<img src="images/icon-04.svg" alt="Icon4" class="musicFruit" id="icon4" draggable="true" data-audio="audioIcon4">
 			<p>Blue Guy</p>
 		</div>
 	</section>
-  
+	
+	<audio id="audioLemon" src="audio/lemonAudio.mp3"></audio>
+	<audio id="audioOrange" src="audio/orangeAudio.mp3"></audio>
+	<audio id="audioWatermelon" src="audio/watermelonAudio.mp3"></audio>
+	<audio id="audioPear" src="audio/pearAudio.mp3"></audio>
+	<audio id="audioIcon1" src="audio/icon1.wav"></audio>
+	<audio id="audioIcon2" src="audio/icon2.wav"></audio>
+	<audio id="audioIcon3" src="audio/icon3.wav"></audio>
+	<audio id="audioIcon4" src="audio/icon4.wav"></audio>
+
 	<section class="audio-box">
 		<h2 class="hidden">Buttons</h2>
 		<button id="resumeButton" class="btn">
@@ -88,7 +97,6 @@
 		<h2 class="hidden">orbitz illustration</h2>
 		<img src="images/ai_icon.svg" alt="ai_icon" id="ai" class="col-span-full m-col-span-full l-col-span-full">
 	</section>
-
 	
 	<script src="js/main.js"></script>
 </body>

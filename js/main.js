@@ -1,6 +1,4 @@
-// JavaScript
-
-//Element Variables
+//musical variables
 const lemonAudio = document.querySelector('#lemonAudio'),
     orangeAudio = document.querySelector('#orangeAudio'),
     watermelonAudio = document.querySelector('#watermelonAudio'),
@@ -16,9 +14,9 @@ const lemonAudio = document.querySelector('#lemonAudio'),
 
 let draggedPiece;
 let currentAudios = [];
-let pausedAudios = [];  // Stores paused audio elements
+let pausedAudios = [];
 
-//Functional variables
+//functional variables
 const rewindButton = document.querySelector('#reset-btn');
 const pauseButton = document.querySelector('#pause-btn');
 const resumeButton = document.querySelector('#resume-btn');
@@ -41,53 +39,47 @@ function dropped(e) {
     console.log('drop called');
     e.preventDefault(e);
 
-    // Check if the drop zone already contains a child element
-    if (this.childElementCount === 0) { // If the drop zone is empty
-        this.appendChild(draggedPiece); // Append the dragged element to the drop zone
-        // Special audio effect method 'play'
+    if (this.childElementCount === 0) {
+        this.appendChild(draggedPiece);
         playAudio(draggedPiece.id, this);
     } else {
         console.log('This drop zone already contains an element!');
-        // Optionally, you can alert or provide feedback to the user that the drop zone is full
     }
 }
 
+//handler for playing the dropped audio
 function playAudio(selectedInstrument, selectedDropZone) {
     console.log(`Playing: ${selectedInstrument}`);
-
-    let instrument = document.createElement('audio');
-    instrument.src = `audio/${selectedInstrument}.mp3`;
-    instrument.load();
-    instrument.loop = true;
-    instrument.play();
-
-    // Set the initial volume for the audio when it's played
-    instrument.volume = volumeSlider.value / 100; // Set the volume based on the slider
-
-    // Save the audio instance in the currentAudios object
-    currentAudios.push(instrument);
+    let audioId = draggedPiece.getAttribute('data-audio');
+    
+    let instrument = document.getElementById(audioId);
+    
+    if (instrument) {
+        instrument.loop = true;
+        instrument.play();
+        instrument.volume = volumeSlider.value / 100;
+        currentAudios.push(instrument);
+    } else {
+        console.log("Audio element not found for:", audioId);
+    }
 }
 
+//handler for pausing the dropped audio
 function pauseAudio() {
     console.log('Pausing all audio');
-
-    // Pause all audio instances in the currentAudios array
     currentAudios.forEach(audio => {
         audio.pause();
-        // Add the paused audio to the pausedAudios array
         pausedAudios.push(audio);
     });
     console.log('All audio paused');
 }
 
+//handler for resuming the paused audio
 function resumeAudio() {
     console.log('Resuming all audio');
-
-    // Resume all paused audio instances
     pausedAudios.forEach(audio => {
         audio.play();
     });
-    // Clear pausedAudios array after resuming
     pausedAudios = [];
     console.log('All audio resumed');
 }
@@ -113,7 +105,6 @@ dropZone4.addEventListener('dragover', draggedOver);
 dropZone4.addEventListener('drop', dropped);
 //audio adjustments
 rewindButton.addEventListener('click', () => {
-    // Trigger a page refresh to reset everything
     window.location.reload();
 });
 pauseButton.addEventListener('click', () => {
@@ -125,10 +116,7 @@ resumeButton.addEventListener('click', () => {
     resumeAudio();
 });
 volumeSlider.addEventListener('input', () => {
-    // Convert the slider value to a decimal between 0 and 1
     let volume = volumeSlider.value / 100;
-    
-    // Set the volume of all currently playing audio elements based on the slider's value
     currentAudios.forEach(audio => {
         audio.volume = volume;
     });

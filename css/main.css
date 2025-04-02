@@ -32,14 +32,7 @@ header {
 	font-size: 28px;
 	font-weight: 700;
 	line-height: 2.25rem;
-}
-
-.requirement {
-	text-align: center;
-	font-size: 20px;
-	font-weight: 500;
-	line-height: 1.6rem;
-	letter-spacing: 0.4px;
+	color: #000000;
 }
 
 .fruit-box {
@@ -64,10 +57,7 @@ header {
 	position: absolute;
 	bottom: 0;
 	margin: 0;
-}
-
-.discoBall {
-	display: none;
+	color: #000000;
 }
 
 #mainLogo {
@@ -89,10 +79,6 @@ header {
 	margin-right: 1rem;
 	margin-bottom: 1rem;
 	margin-left: 10px;
-}
-
-.speakerCan {
-	display: none;
 }
 
 .audio-box {
@@ -125,23 +111,12 @@ button {
 	margin-top: 30px;
 }
 
-
-
 #ai_icon  {
 	position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-#ai_icon {
-	position: relative;
-	z-index: 1;
-	width: 23rem;
-	margin-top: 1rem;
-}
-
-
 
 /* Tablet Styling */
  
@@ -170,7 +145,7 @@ button {
 		margin-top: 40px;
 	}
 	
-	.drop-square {
+	.dropZone {
 		border-radius: 10px;
 		width: 5rem;
 		height: 5rem;
@@ -204,14 +179,6 @@ button {
 		transform: translate(-50%, -50%);
 	}
 	
-	#ai_icon {
-		position: relative;
-		z-index: 1;
-		width: 25rem;
-		margin-top: -3rem;
-		top: 305px;
-	}
-	
  }
 
 /* Desktop Styling */
@@ -234,41 +201,16 @@ button {
 		margin-left: 10px;
 	}
 	
-
-	#discoBall_2 {
-		top: -4rem;
-		right: -5rem;
-		z-index: -1;
-	}
-
 	#mainLogo {
 		width: 32rem;
 		margin-top: 40px;
 	}
 	
-	.drop-square {
+	.dropZone {
 		border-radius: 10px;
 		width: 5rem;
 		height: 5rem;
 		margin-bottom: 1rem;
-	}
-	
-	.speakerCan {
-		display: block;
-		width: 35rem;
-		position: relative;
-		top: -750px;
-		z-index: -1;
-	}
-	
-	#speaker-1 {
-		position: absolute;
-		left: -5rem;
-	}
-
-	#speaker-2 {
-		position: absolute;
-		right: -5rem;
 	}
 
 	.audio-box {
@@ -290,18 +232,4 @@ button {
 		top: -230px;
 	}
 	
-	#bunnyDJ {
-		position: relative;
-		z-index: 1;
-		width: 30rem;
-		margin-top: 0rem;
-		top: 70px;
-	}
-	
-	#orangeStripe {
-		position: absolute;
-		z-index: 0;
-		width: 100%;
-		top: -130px;
-	}
  }
