@@ -12,10 +12,7 @@ html {
 body {
 	margin: 0;
 	border: 0;
-	background-color: #FFF;
 	background-repeat:no-repeat;
-	background-size: 600%;
-	color:#FFF;
 	font-family: 'Poppins', sans-serif;
 	min-width: 412px;
 	overflow-x: hidden;
@@ -52,7 +49,8 @@ header {
 
 .fruits p {
 	text-transform: uppercase;
-	font-size: 20px;
+	text-align: center;
+	font-size: 1rem;
 	font-weight: 600;
 	position: absolute;
 	bottom: 0;
@@ -61,7 +59,7 @@ header {
 }
 
 #mainLogo {
-	width: 23rem;
+	width: 5rem;
 	display: flex;
 	margin: auto;
 	margin-top: 30px;
@@ -72,13 +70,18 @@ header {
 }
 
 .dropZone {
-	background-color: #000000;
+	background-color: #ea1b8d;
 	border-radius: 10px;
 	width: 4.5rem;
 	height: 4.5rem;
 	margin-right: 1rem;
 	margin-bottom: 1rem;
 	margin-left: 10px;
+}
+  
+.musicFruit:hover {
+	transform: scale(1.5);
+	transition: all 1s ease-out;
 }
 
 .audio-box {
@@ -116,6 +119,25 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+footer #ai {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+
+.footertext {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 2.25rem;
+	color: #000000;
 }
 
 /* Tablet Styling */
